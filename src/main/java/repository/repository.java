@@ -1,9 +1,8 @@
 package repository;
-import models.Alumno;
+import models.Clientes;
 import org.springframework.data.jpa.repository.JpaRepository;
- 
 
 
-public interface repository extends JpaRepository<Alumno, long > {
+public interface repository extends JpaRepository<Clientes, Long> {
 
 }

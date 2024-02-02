@@ -1,31 +1,33 @@
- -- DROP TABLE grupo6 IF EXIST;
---  DROP TABLE grupo7 IF EXIST;
+   CREATE DATABASE comercio;
 
- -- CREATE DATABASE alumnado;
+-- CREATE TABLE clientes (
 
-   USE alumnado;
-
-   CREATE TABLE quimicaOrganica(
-    
-   idQO int PRIMARY KEY,
-    primerNombre VARCHAR(16) NOT NULL,
-   nombrePosteriores VARCHAR(60),
-    primerApellido VARCHAR(16) NOT NULL,
-    segundoApellido VARCHAR(16),
-    edad INT,
-    nota FLOAT
-  );
-
- -- CREATE TABLE fisicoquimica(
-
- --  idFQ INT PRIMARY KEY,
- --  primerNombre VARCHAR(16) NOT NULL,
- --  nombresPosteriores VARCHAR(60),
- --  primerApellido VARCHAR(16) NOT NULL,
- --  segundoApellido VARCHAR(16),
- --  edad INT,
- --  nota FLOAT
-
+ --   idCliente int(20) PRIMARY KEY NOT NULL,
+ --   Nombre VARCHAR(20) NOT NULL,
+ --   nombresPosteriores VARCHAR(150),
+ --   Apellido VARCHAR(20) NOT NULL,
+ --   segundoApellido VARCHAR(20),
+ --   mail VARCHAR(50)
  -- );
 
+-- USE clientes;
+
+--    CREATE TABLE producto(
+
+ --       idProducto int(20) FOREIGN KEY NOT NULL,
+  --      titulo VARCHAR (100) NOT NULL,
+  --      descripcion VARCHAR(500) NOT NULL
+
+  --  );
+
+ -- USE producto;
+
+ --   CREATE TABLE ventas(
+
+  --      idFactura int(20) FOREIGN KEY NOT NULL,
+  --      titulo VARCHAR(100) NOT NULL,
+  --      precio FLOAT(23) NOT NULL,
+  --      cantidad int
+  --  );
+ -- USE ventas;
  
