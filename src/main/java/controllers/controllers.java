@@ -44,7 +44,7 @@ public class controllers {
            Alumno updateAlumno = repo.findById(alumno).get();
            updateAlumno.setPrimerNombre(alumno.getPrimerNombre());
            updateAlumno.setNombrePosteriores(alumno.getNombrePosteriores());
-           updateAlumno.setApellido(alumno.getApellido());
+           updateAlumno.setprimerApellido(alumno.getprimerApellido());
            updateAlumno.setSegundoApellido(alumno.getSegundoApellido());
            updateAlumno.setEdad(alumno.getEdad());
            updateAlumno.setNota(alumno.getNota());

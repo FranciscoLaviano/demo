@@ -7,7 +7,7 @@
 
    CREATE TABLE quimicaOrganica(
     
-   idQO INT PRIMARY KEY,
+   idQO int PRIMARY KEY,
     primerNombre VARCHAR(16) NOT NULL,
    nombrePosteriores VARCHAR(60),
     primerApellido VARCHAR(16) NOT NULL,
