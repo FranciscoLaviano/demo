@@ -1,20 +1,20 @@
 package controllers;
 
-import jakarta.persistence.Id;
 import models.Clientes;
 import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.repository.Repository;
+import org.springframework.data.annotation.Id;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import repository.repository;
-
+import java.lang.String;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
-@Id
+
 @RestController
 public class controllers {
 
@@ -25,7 +25,7 @@ public class controllers {
     public String index(){
       return "Conectado";
    }
-    
+
    @GetMapping("clients")
     public List<Clientes> getIdClients() {
         return repo.findAll();
@@ -41,9 +41,10 @@ public class controllers {
     }
 
     @PostMapping("modificar/{idCliente}")
+    @Id
       public String  update(@PathVariable long Id, @RequestBody Clientes clientes) {
 
-        Clientes updateClientes = repo.findById(Clients).getIdCliente();
+        Clientes updateClientes = repo.findById(Clientes).getIdClientes();
            updateClientes.setNombre(clientes.getNombre());
            updateClientes.setNombresPosteriores(clientes.getNombresPosteriores());
            updateClientes.setPrimerApellido(clientes.getPrimerApellido());
