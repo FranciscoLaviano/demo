@@ -14,7 +14,7 @@ import repository.repository;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 
-
+@Id
 @RestController
 public class controllers {
 
@@ -26,8 +26,8 @@ public class controllers {
       return "Conectado";
    }
     
-   @GetMapping("clientes")
-    public List<Clientes> getClientes() {
+   @GetMapping("clients")
+    public List<Clientes> getIdClients() {
         return repo.findAll();
     }
 
@@ -42,8 +42,8 @@ public class controllers {
 
     @PostMapping("modificar/{idCliente}")
       public String  update(@PathVariable long Id, @RequestBody Clientes clientes) {
-        //Long Clientes = null;
-        Clientes updateClientes = repo.findById(Clientes).getIdCliente();
+
+        Clientes updateClientes = repo.findById(Clients).getIdCliente();
            updateClientes.setNombre(clientes.getNombre());
            updateClientes.setNombresPosteriores(clientes.getNombresPosteriores());
            updateClientes.setPrimerApellido(clientes.getPrimerApellido());
