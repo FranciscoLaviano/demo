@@ -1,9 +1,10 @@
 package controllers;
 
-import models.Clientes;
-import org.hibernate.mapping.List;
+import lombok.Getter;
+import lombok.Setter;
+import models.Clients;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.repository.Repository;
 import org.springframework.data.annotation.Id;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,8 @@ import repository.repository;
 import java.lang.String;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
+@Getter
+@Setter
 
 @RestController
 public class controllers {
@@ -23,47 +26,49 @@ public class controllers {
 
     @GetMapping
     public String index(){
-      return "Conectado";
+      return "Connected";
    }
 
    @GetMapping("clients")
-    public List<Clientes> getIdClients() {
+    public List<Clients> getId() {
         return repo.findAll();
     }
 
 
     @PostMapping("alta")
-    public String post(@RequestBody Clientes clientes) {
-        repo.save(clientes);
+    public String post(@RequestBody Clients clients) {
+        repo.save(clients);
         //TODO: process POST request
         
-        return "Guardado";
+        return "Saved";
     }
 
-    @PostMapping("modificar/{idCliente}")
+    @PostMapping("modification/{Id}")
     @Id
-      public String  update(@PathVariable long Id, @RequestBody Clientes clientes) {
 
-        Clientes updateClientes = repo.findById(Clientes).getIdClientes();
-           updateClientes.setNombre(clientes.getNombre());
-           updateClientes.setNombresPosteriores(clientes.getNombresPosteriores());
-           updateClientes.setPrimerApellido(clientes.getPrimerApellido());
-           updateClientes.setSegundoApellido(clientes.getSegundoApellido());
-           updateClientes.setMail(clientes.getMail());
+      public String  update(@PathVariable Long Id, @RequestBody Clients clients) {
 
-           repo.save(updateClientes);
 
-           return "Modificado";
+           Clients updateClients = repo.findById(Clients).getId();
+           updateClients.setName(clients.getName());
+           updateClients.setOverNames(clients.getOverNames());
+           updateClients.setFirstSurname(clients.getFirstSurname());
+           updateClients.setSecondSurname(clients.getSecondSurname());
+           updateClients.setMail(clients.getMail());
+
+           repo.save(updateClients);
+
+           return "Modification";
 
       }   
 
-    @DeleteMapping("baja/{idCliente}")
-        public String delete(@PathVariable long idCliente)   {
+    @DeleteMapping("baba/{Id}")
+        public String delete(@PathVariable long Id)   {
             
-            Clientes deleteCliente = repo.findById(idCliente).get();
-            repo.delete(deleteCliente);
+            Clients deleteClient = repo.findById(Id).get();
+            repo.delete(deleteClient);
 
-            return "Eliminado";
+            return "Elimination";
 
       }
 

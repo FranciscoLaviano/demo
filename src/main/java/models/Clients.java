@@ -1,63 +1,82 @@
 package models;
 
-//import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Column;
+import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.mapping.PrimaryKey;
+//import org.hibernate.mapping.PrimaryKey;
 import  java.lang.String;
 
-@Entity
-
-
-/*@GenerationType
-@PrimaryKey*/
+//@Entity;
 
 
 
-public  class Clientes {
+
+
+@Setter
+@Getter
+public  class Clients {
+
+    //@Entity
+    @Column
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter
-    private long idCliente;
-    @Setter
-    private String Nombre;
+    private long Id;
+    private String Name;
 
-    @Setter
-    private String nombresPosteriores;
-    @Setter
-    private String primerApellido;
-    @Setter
-    private String segundoApellido;
-    @Setter
+    private String overNames;
+    private String firstSurname;
+    private String secondSurname;
     private String mail;
 
+    public long getId() {
 
-    public long getIdCliente() {
-        return idCliente;
+        return Id;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public void setId(long Id) {
+        this.Id = Id;
     }
 
-    public String getNombresPosteriores() {
-        return nombresPosteriores;
+    public String getName() {
+        return Name;
     }
 
-    public String getPrimerApellido() {
-        return primerApellido;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getSegundoApellido() {
-        return segundoApellido;
+    public String getOverNames() {
+        return overNames;
     }
 
+    public void setOverNames(String overNames) {
+        this.overNames = overNames;
+    }
+
+    public String getFirstSurname() {
+        return firstSurname;
+    }
+
+    public void setFirstSurname(String firstSurname) {
+        this.firstSurname = firstSurname;
+    }
+
+    public String getSecondSurname() {
+        return secondSurname;
+    }
+
+    public void setSecondSurname(String secondSurname) {
+        this.secondSurname = secondSurname;
+    }
 
     public String getMail() {
         return mail;
     }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
 
 }

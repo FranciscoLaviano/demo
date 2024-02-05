@@ -2,7 +2,7 @@
 
 -- CREATE TABLE clientes (
 
- --   idCliente int(20) PRIMARY KEY NOT NULL,
+ --   Id int(20) PRIMARY KEY NOT NULL,
  --   Nombre VARCHAR(20) NOT NULL,
  --   nombresPosteriores VARCHAR(150),
  --   Apellido VARCHAR(20) NOT NULL,
