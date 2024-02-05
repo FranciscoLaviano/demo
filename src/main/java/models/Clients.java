@@ -1,5 +1,6 @@
 package models;
-import jakarta.persistence.Column;
+
+//import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -9,7 +10,7 @@ import org.hibernate.mapping.PrimaryKey;
 import  java.lang.String;
 
 @Entity
-//@Column
+
 
 /*@GenerationType
 @PrimaryKey*/
