@@ -1,14 +1,16 @@
-   CREATE DATABASE comercio;
+  -- CREATE DATABASE comercio;
 
--- CREATE TABLE clientes (
+--    USE comercio;
 
- --   Id int(20) PRIMARY KEY NOT NULL,
- --   Nombre VARCHAR(20) NOT NULL,
- --   nombresPosteriores VARCHAR(150),
- --   Apellido VARCHAR(20) NOT NULL,
- --   segundoApellido VARCHAR(20),
- --   mail VARCHAR(50)
- -- );
+ CREATE TABLE clientes (
+
+    Id int(20) PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    nombresPosteriores VARCHAR(150),
+    Apellido VARCHAR(20) NOT NULL,
+   segundoApellido VARCHAR(20),
+    mail VARCHAR(50)
+  );
 
 -- USE clientes;
 

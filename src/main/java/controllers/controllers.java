@@ -46,10 +46,10 @@ public class controllers {
     @PostMapping("modification/{Id}")
     @Id
 
-      public String  update(@PathVariable Long Id, @RequestBody Clients clients) {
+      public String  update(@PathVariable  Long Id, @RequestBody Clients clients) {
 
 
-           Clients updateClients = repo.findById(Clients).getId();
+           Clients updateClients = repo.findById(Id).get();
            updateClients.setName(clients.getName());
            updateClients.setOverNames(clients.getOverNames());
            updateClients.setFirstSurname(clients.getFirstSurname());
