@@ -1,0 +1,1 @@
+-- INSERT INTO clients (Name, overNames, firstSurname, secondSurname, mail) VALUES ( 'Francisco' , 'Antonio', 'Laviano', 'Colman', 'frankitziel@gmail.com' );
