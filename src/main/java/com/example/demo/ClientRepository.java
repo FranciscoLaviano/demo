@@ -1,2 +1,4 @@
-package com.example.demo;public class ClientRepository {
+package com.example.demo;
+
+public class ClientRepository {
 }

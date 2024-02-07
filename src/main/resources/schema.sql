@@ -1,18 +1,18 @@
   -- CREATE DATABASE comercio;
 
---    USE comercio;
+ --  USE comercio;
 
- CREATE TABLE clientes (
+  CREATE TABLE clients (
 
-    Id int(20) PRIMARY KEY NOT NULL,
-    Nombre VARCHAR(20) NOT NULL,
-    nombresPosteriores VARCHAR(150),
-    Apellido VARCHAR(20) NOT NULL,
-   segundoApellido VARCHAR(20),
-    mail VARCHAR(50)
-  );
+   -- Id int(20) PRIMARY KEY NOT NULL,
+    Name VARCHAR(20) NOT NULL,
+    overNames VARCHAR(150),
+    firstSurname VARCHAR(20) NOT NULL,
+   secondSurname VARCHAR(20),
+   mail VARCHAR(50)
+   );
 
--- USE clientes;
+-- USE clients;
 
 --    CREATE TABLE producto(
 

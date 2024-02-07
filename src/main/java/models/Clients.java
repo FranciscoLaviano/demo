@@ -21,12 +21,22 @@ public  class Clients {
     @Column
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private Long Id;
+    @Setter
+    @Getter
     private String Name;
 
+    @Getter
+    @Setter
     private String overNames;
+    @Setter
+    @Getter
     private String firstSurname;
+    @Setter
+    @Getter
     private String secondSurname;
+    @Setter
+    @Getter
     private String mail;
 
     public long getId() {
@@ -36,46 +46,6 @@ public  class Clients {
 
     public void setId(long Id) {
         this.Id = Id;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getOverNames() {
-        return overNames;
-    }
-
-    public void setOverNames(String overNames) {
-        this.overNames = overNames;
-    }
-
-    public String getFirstSurname() {
-        return firstSurname;
-    }
-
-    public void setFirstSurname(String firstSurname) {
-        this.firstSurname = firstSurname;
-    }
-
-    public String getSecondSurname() {
-        return secondSurname;
-    }
-
-    public void setSecondSurname(String secondSurname) {
-        this.secondSurname = secondSurname;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
     }
 
 
